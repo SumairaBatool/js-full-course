@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task two</title>
+</head>
+<style>
+    .container{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        
+
+    }
+    .details{
+        box-shadow: 0px 20px 35px 0px #0000001A;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+    .details img{
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container">
+<p ></p>
+
+    </div>
+    <script>
+        let cards = [
+            {
+                image: "../figmaproject/images/card2.png",
+                name: "arifa",
+                price: "$299.00/2days",
+                desc: "Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore",
+       
+            }
+            ,
+            {
+                image: "../figmaproject/images/card1.png",
+                name: "arifa",
+                price: "$299.00/2days",
+                desc: "Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore",
+             
+            }
+            ,
+            {
+                image: "../figmaproject/images/card2.png",
+                name: "arifa",
+                price: "$299.00/2days",
+                desc: "Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore incididunt ut labore et dolore",
+              
+            }
+
+        ]
+        let get = cards.map((crunt, indx) => {
+            return ` <div class="details">
+            <div class="image">
+                <img src="${crunt.image}" alt="">
+            </div>
+            <div class="name">
+                <p>${crunt.name}</p>
+                <p>${crunt.price}</p>
+            </div>
+            <div class="desc">
+                <p>${crunt.desc}</p>
+            </div>
+            <div class="btn">
+                <button onclick="clickme(${indx})">Buy Now</button>
+            </div>
+        </div>`
+        }).join("")
+        let contain=document.querySelector('.container')
+        contain.innerHTML=get
+        function clickme(id){
+            alert(id)
+
+        }
+
+    </script>
+</body>
+
+</html>

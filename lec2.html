@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .cards {
+            width: 20%;
+            padding: 3px;
+            box-shadow: 0px 0px 7px 1px black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        let contianer = document.querySelector('.container')
+        // let person1 = {
+        //     name: "zain",
+        //     age: 23
+        // }
+
+        let peoples = [
+            {
+
+                image: "../figmaproject/images/card1.png",
+                name: "zain",
+                age: 23
+            },
+            {
+                image: "../figmaproject/images/card1.png",
+                name: "malik",
+                age: 20
+            }
+            ,
+            {
+                image: "../figmaproject/images/card1.png",
+                name: "adnan",
+                age: 18
+            }
+            ,
+            {
+                image: "../figmaproject/images/card1.png",
+                name: "abbas",
+                age: 19,
+            }
+        ]
+
+        let name = peoples.map((curElem, ind) => {
+            return ` <div class="cards">
+        <div class="img">
+            <img src=${curElem.image} alt="no image">
+        </div>
+        <div class="detials">
+            <p>${curElem.name}</p>
+            <p>${curElem.age}</p>
+        </div>
+    </div>  `
+        }).join("")
+contianer.innerHTML = name
+
+    </script>
+
+</body>
+
+</html>
